@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>DeltaEngine.DirectX</id>
+    <version>0.9.7.5</version>
+    <authors>DeltaEngine</authors>
+    <owners>DeltaEngine</owners>
+    <licenseUrl>http://deltaengine.net/About/License</licenseUrl>
+    <projectUrl>http://deltaengine.net/</projectUrl>
+    <iconUrl>http://deltaengine.net/Images/DeltaEngineIcon128x128.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>DirectX Version of the Delta Engine, uses SharpDX. The Delta Engine is allows you to develop applications and especially games for many different platforms (mobile, tablets, console, PC) completely under Windows with .NET or native C++ by using your favorite tools.</description>
+    <releaseNotes>Milestone 3 Uranus v0.9.7.5 beta release</releaseNotes>
+    <copyright>Copyright 2013</copyright>
+    <tags>DeltaEngine Delta Engine .NET Windows DirectX SharpDX Open Source Multiplatform Game Development</tags>
+    <dependencies>
+      <dependency id="Autofac" version="3.0.0" />
+      <dependency id="SharpDX" version="2.4.2" />
+      <dependency id="SharpDX.D3DCompiler" version="2.4.2" />
+      <dependency id="SharpDX.Direct2D1" version="2.4.2" />
+      <dependency id="SharpDX.Direct3D11" version="2.4.2" />
+      <dependency id="SharpDX.DXGI" version="2.4.2" />
+    </dependencies>
+  </metadata>
+</package>

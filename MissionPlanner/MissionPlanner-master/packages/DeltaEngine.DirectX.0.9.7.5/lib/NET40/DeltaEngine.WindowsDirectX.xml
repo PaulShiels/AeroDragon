@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DeltaEngine.WindowsDirectX</name>
+    </assembly>
+    <members>
+        <member name="T:DeltaEngine.Platforms.App">
+            <summary>
+            Exchangable App entry point for Windows DirectX applications and visual tests.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DeltaEngine.Multimedia.SharpDX</name>
+    </assembly>
+    <members>
+        <member name="T:DeltaEngine.Multimedia.SharpDX.StreamBuffer">
+            <summary>
+            Helper class wrapping an XAudio buffer object and streaming the next data into the buffer.
+            </summary>
+        </member>
+        <member name="T:DeltaEngine.Multimedia.SharpDX.XAudioDevice">
+            <summary>
+            Native implementation of an audio context.
+            </summary>
+        </member>
+        <member name="T:DeltaEngine.Multimedia.SharpDX.XAudioMusic">
+            <summary>
+            Native XAudio implementation for music playback.
+            </summary>
+        </member>
+        <member name="T:DeltaEngine.Multimedia.SharpDX.XAudioSound">
+            <summary>
+            Native SharpDX implementation of Sound.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,152 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DeltaEngine.Core</name>
+    </assembly>
+    <members>
+        <member name="T:DeltaEngine.Core.ArrayExtensions">
+            <summary>
+            Additional array manipluation and to string methods.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "T:DeltaEngine.Core.AssemblyChecker" -->
+        <member name="T:DeltaEngine.Core.AssemblyExtensions">
+            <summary>
+            Additional methods for assembly related actions
+            </summary>
+        </member>
+        <member name="T:DeltaEngine.Core.ContentData">
+            <summary>
+            Base class for all content classes, which will be loaded and cached by Content.Load.
+            </summary>
+        </member>
+        <member name="T:DeltaEngine.Core.Content">
+            <summary>
+            Allows to load type derived from ContentData (images, sounds, xml files, levels, etc.) and
+            returns a cached useable instance of the given type. Most importantly provides an easy and
+            quick access to all cached resources, but also provides advanced content service downloading.
+            </summary>
+        </member>
+        <member name="T:DeltaEngine.Core.Randomizer">
+            <summary>
+            The definition for all random number generators
+            </summary>
+        </member>
+        <member name="M:DeltaEngine.Core.Randomizer.Get(System.Single,System.Single)">
+            <summary>
+            Returns a float between min and max, by default a value between zero and one.
+            </summary>
+        </member>
+        <member name="M:DeltaEngine.Core.Randomizer.Get(System.Int32,System.Int32)">
+            <summary>
+            Returns an integer greater than or equal to min and strictly less than max
+            </summary>
+        </member>
+        <member name="T:DeltaEngine.Core.EnumExtensions">
+            <summary>
+            Allows to get the number of elements in an enum.
+            </summary>
+        </member>
+        <member name="T:DeltaEngine.Core.PseudoRandom">
+            <summary>
+            Returns quick random integers and floats (faster than System.Random). For more info see:
+            http://www.codeproject.com/Articles/25172/Simple-Random-Number-Generation
+            which is based on: http://www.bobwheeler.com/statistics/Password/MarsagliaPost.txt
+            </summary>
+        </member>
+        <member name="T:DeltaEngine.Core.StopwatchTime">
+            <summary>
+            Provides ticks for the Time class via the System.Diagnostics.Stopwatch class. This class is
+            usually the fallback if nothing else has been registered for the ElapsedTime interface.
+            </summary>
+        </member>
+        <member name="T:DeltaEngine.Core.ElapsedTime">
+            <summary>
+            Provides Ticks for the Time class to measure time differences between frames. Can easily be
+            mocked for tests and replaced with platforms framework classes for better accuracy and speed.
+            </summary>
+        </member>
+        <member name="T:DeltaEngine.Core.StackTraceExtensions">
+            <summary>
+            Provides additional check methods on stack traces to find out where we are (e.g. in tests)
+            </summary>
+        </member>
+        <member name="M:DeltaEngine.Core.StackTraceExtensions.GetEntryName">
+            <summary>
+            Get entry name from stack frame, which is either the namespace name where the main method
+            is located or if we are started from a test, the name of the test method.
+            </summary>
+        </member>
+        <member name="P:DeltaEngine.Core.StackTraceExtensions.IsVisualTestCase">
+            <summary>
+            Since we cannot access NUnit.Framework.TestCaseAttribute here, inject it from TestStarter.
+            </summary>
+        </member>
+        <member name="T:DeltaEngine.Core.ExceptionExtensions">
+            <summary>
+            Categorizes exceptions into fatal and weak ones. Fatal exceptions are always rethrown and weak
+            ones (most likely simple programming mistakes) can be logged and ignored if no debugger is
+            attached. See http://vasters.com/clemensv/2012/09/06/Are+You+Catching+Falling+Knives.aspx
+            </summary>
+        </member>
+        <member name="T:DeltaEngine.Core.MathExtensions">
+            <summary>
+            Extends the System.Math class, but uses floats and provides some extra constants.
+            </summary>
+        </member>
+        <member name="T:DeltaEngine.Core.Presenter">
+            <summary>
+            While Runners execute before app code is run, presenters are run after app code has been
+            executed at the end of each frame. Presenters are quick and executed in the same thread.
+            http://DeltaEngine.net/About/CodingStyle#Presenters
+            </summary>
+        </member>
+        <member name="T:DeltaEngine.Core.Runner">
+            <summary>
+            Allows classes to automatically run before any app code each frame (clearing, actors, physics,
+            etc.). Runners are executed in threads based on dependencies used in their constructors.
+            http://DeltaEngine.net/About/CodingStyle#Runners
+            </summary>
+        </member>
+        <member name="T:DeltaEngine.Core.Runner`1">
+            <summary>
+            Variation of Runner to allow passing in any dependency automatically into Run.
+            </summary>
+        </member>
+        <member name="T:DeltaEngine.Core.Runner`2">
+            <summary>
+            Variation of Runner to allow passing in two dependencies automatically into Run.
+            </summary>
+        </member>
+        <member name="T:DeltaEngine.Core.Runner`3">
+            <summary>
+            Variation of Runner to allow passing in three dependencies automatically into Run.
+            </summary>
+        </member>
+        <member name="T:DeltaEngine.Core.StringExtensions">
+            <summary>
+            Provides additional and simplified string manipulation methods.
+            </summary>
+        </member>
+        <member name="T:DeltaEngine.Core.ThreadExtensions">
+            <summary>
+            Useful wrapper functions for threading
+            </summary>
+        </member>
+        <member name="T:DeltaEngine.Core.Time">
+            <summary>
+            Provides the current app run time and delta time for the frame. All times are in seconds.
+            </summary>
+        </member>
+        <member name="M:DeltaEngine.Core.Time.GetSecondsSinceStartToday">
+            <summary>
+            Returns an accurate seconds float value for today, would get inaccurate with more days.
+            </summary>
+        </member>
+        <member name="T:DeltaEngine.Core.Resolver">
+            <summary>
+            Base resolver methods like Resolve and functionally to run runners and presenters.
+            </summary>
+        </member>
+    </members>
+</doc>

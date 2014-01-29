@@ -1,0 +1,131 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DeltaEngine.Rendering</name>
+    </assembly>
+    <members>
+        <member name="T:DeltaEngine.Rendering.AnimatedSprite">
+            <summary>
+            AnimatedSprites are 2D quads rendered automatically on the specified location
+            changing the main image for the next one in a determined fps, etc.
+            </summary>
+        </member>
+        <member name="T:DeltaEngine.Rendering.Sprite">
+            <summary>
+            Sprites are 2D quads rendered automatically on the specified location, etc.
+            </summary>
+        </member>
+        <member name="T:DeltaEngine.Rendering.Renderable">
+            <summary>
+            Renders anything automatically when added to renderer until it is removed again via Dispose.
+            </summary>
+        </member>
+        <member name="T:DeltaEngine.Rendering.BubbleSortedList">
+            <summary>
+            Facilitates the sorting of the objects using a rendering layer logic
+            </summary>
+        </member>
+        <member name="T:DeltaEngine.Rendering.Camera2DControlledQuadraticScreenSpace">
+            <summary>
+            Behaves like QuadraticScreenSpace but can also pan and zoom
+            </summary>
+        </member>
+        <member name="T:DeltaEngine.Rendering.QuadraticScreenSpace">
+            <summary>
+            Converts to and from quadratic space. https://deltaengine.fogbugz.com/default.asp?W101
+            </summary>
+        </member>
+        <member name="T:DeltaEngine.Rendering.ScreenSpace">
+            <summary>
+            Converts to and from some kind of screen space like Quadratic, Pixel, etc.
+            </summary>
+        </member>
+        <member name="F:DeltaEngine.Rendering.ScreenSpace.Epsilon">
+            <summary>
+            Small value to make sure we always round up in ToPixelSpaceRounded for 0.5f or 0.499999f.
+            </summary>
+        </member>
+        <member name="M:DeltaEngine.Rendering.ScreenSpace.ToPixelSpaceRounded(DeltaEngine.Datatypes.Point)">
+            <summary>
+            The rounded version of ToPixelSpace is used for lines, boxes and fonts where it matters to
+            actually render at exact pixel positions to get sharp lines, boxes or font rendering.
+            </summary>
+        </member>
+        <member name="T:DeltaEngine.Rendering.OutlinedRect">
+            <summary>
+            Draws an unfilled rectangle in 2D space
+            </summary>
+        </member>
+        <member name="T:DeltaEngine.Rendering.Shapes.Rect">
+            <summary>
+            Keeps position, size and color for an automatically rendered rectangle on screen.
+            </summary>
+        </member>
+        <member name="T:DeltaEngine.Rendering.Shapes.Circle">
+            <summary>
+            Draws a filled circle in 2D space, with the border optionally a different color
+            </summary>
+        </member>
+        <member name="T:DeltaEngine.Rendering.Shapes.Ellipse">
+            <summary>
+            Draws a filled ellipse in 2D space, with the border optionally a different color
+            </summary>
+        </member>
+        <member name="T:DeltaEngine.Rendering.OutlinedCircle">
+            <summary>
+            Draws an unfilled circle in 2D space
+            </summary>
+        </member>
+        <member name="T:DeltaEngine.Rendering.OutlinedEllipse">
+            <summary>
+            Draws an unfilled ellipse in 2D space
+            </summary>
+        </member>
+        <member name="T:DeltaEngine.Rendering.VectorText">
+            <summary>
+            Draws vector style text in 2D space
+            </summary>
+        </member>
+        <member name="T:DeltaEngine.Rendering.ZoomingEffect">
+            <summary>
+            Simple zooming particle effect, which is based on a sprite and disposes it after timout.
+            </summary>
+        </member>
+        <member name="T:DeltaEngine.Rendering.FallingEffect">
+            <summary>
+            Simple falling particle effect, which is based on a sprite and disposes it after timout.
+            </summary>
+        </member>
+        <member name="T:DeltaEngine.Rendering.FadeoutEffect">
+            <summary>
+            Simple fadeout particle effect, which is based on a sprite and disposes it after timout.
+            </summary>
+        </member>
+        <member name="T:DeltaEngine.Rendering.FlipMode">
+            <summary>
+            Allows to flip sprite drawing horizontally or vertically.
+            </summary>
+        </member>
+        <member name="T:DeltaEngine.Rendering.PixelScreenSpace">
+            <summary>
+            Converts to and from Pixel space. https://deltaengine.fogbugz.com/default.asp?W101
+            </summary>
+        </member>
+        <member name="T:DeltaEngine.Rendering.RelativeScreenSpace">
+            <summary>
+            Converts to and from Relative space. https://deltaengine.fogbugz.com/default.asp?W101
+            </summary>
+        </member>
+        <member name="T:DeltaEngine.Rendering.Line2D">
+            <summary>
+            Draws line in 2D space.
+            </summary>
+        </member>
+        <member name="T:DeltaEngine.Rendering.Renderer">
+            <summary>
+            Facilitates the rendering of shapes, meshes or images on screen. Uses drawings, which needs a
+            graphic device. Most importantly this class does sort and optimize all rendering each frame.
+            </summary>
+        </member>
+    </members>
+</doc>

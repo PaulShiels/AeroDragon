@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DeltaEngine.Datatypes</name>
+    </assembly>
+    <members>
+        <member name="T:DeltaEngine.Datatypes.BinaryData">
+            <summary>
+            Basic functionality to save and reconstruct byte data for networking and file operations.
+            </summary>
+        </member>
+        <member name="T:DeltaEngine.Datatypes.BinaryDataExtension">
+            <summary>
+            Allows to easily save and recreate BinaryData objects with the full type names.
+            Make sure to load all assemblies before reconstructing any type.
+            </summary>
+        </member>
+        <member name="M:DeltaEngine.Datatypes.BinaryDataExtension.Save(DeltaEngine.Datatypes.BinaryData,System.IO.BinaryWriter)">
+            <summary>
+            Saves any BinaryData object type information and the actual data contained in in.
+            </summary>
+        </member>
+        <member name="M:DeltaEngine.Datatypes.BinaryDataExtension.Create``1(System.IO.BinaryReader)">
+            <summary>
+            Loads a BinaryData object and reconstructs the object based on the saved type information.
+            </summary>
+        </member>
+        <member name="T:DeltaEngine.Datatypes.Color">
+            <summary>
+            Color with a byte or float per component (red, green, blue, alpha)
+            </summary>
+        </member>
+        <member name="P:DeltaEngine.Datatypes.Color.PackedRgba">
+            <summary>
+            Colors are stored as RGBA byte values and this gives back the usual RGBA format as a 32 bit
+            value. R takes the first 8 bits, G the next 8 up to A for the last 8 bits. This call can be
+            optimized away by the build service, always use this when working with colors if possible.
+            </summary>
+        </member>
+        <member name="P:DeltaEngine.Datatypes.Color.PackedBgra">
+            <summary>
+            Similar to PackedBgra, but R and B are switched around. This format is commonly used for
+            Windows bitmaps and usually needed to load or process bitmap file or in memory data.
+            </summary>
+        </member>
+        <member name="T:DeltaEngine.Datatypes.Entity">
+            <summary>
+            Basis for entities, which have a name and can have components and be based on a template.
+            https://deltaengine.fogbugz.com/default.asp?W195
+            </summary>
+        </member>
+        <member name="T:DeltaEngine.Datatypes.Matrix">
+            <summary>
+            4x4 Matrix from 16 floats internally, access happens via indexer, optimizations done in
+             BuildService.
+            </summary>
+        </member>
+        <member name="M:DeltaEngine.Datatypes.Matrix.CreateRotationXyz(System.Single,System.Single,System.Single)">
+            <summary>
+            THe multiplication order is first Z, then Y and finally X
+            </summary>
+        </member>
+        <member name="M:DeltaEngine.Datatypes.Matrix.GetDeterminant">
+            <summary>
+            For more information about how to calculate Matrix Determinant see
+            http://en.wikipedia.org/wiki/Determinant
+            </summary>
+        </member>
+        <member name="T:DeltaEngine.Datatypes.Point">
+            <summary>
+            Represents a 2D vector, which is useful for screen positions (sprites, mouse, touch, etc.)
+            </summary>
+        </member>
+        <member name="T:DeltaEngine.Datatypes.Rectangle">
+            <summary>
+            Holds data for a rectangle by specifying its top left corner and the width and height.
+            </summary>
+        </member>
+        <member name="T:DeltaEngine.Datatypes.Size">
+            <summary>
+            Holds the width and height of an object (e.g. a rectangle)
+            </summary>
+        </member>
+        <member name="T:DeltaEngine.Datatypes.Triangle2D">
+            <summary>
+            Holds the three corners that define a triangle in 2D space
+            </summary>
+        </member>
+    </members>
+</doc>
